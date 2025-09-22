@@ -1,0 +1,17 @@
+<header class="header flex justify-between items-center">
+  <div class="flex items-center">
+    <!-- Botón hamburguesa móvil -->
+    <button class="md:hidden mr-4" (click)="onToggleSidebar()">
+      <i class="lucide lucide-menu w-6 h-6"></i>
+    </button>
+
+    <!-- Logo -->
+    <div class="logo">Dashboard</div>
+  </div>
+
+  <!-- Menú usuario / notificaciones -->
+  <div class="user-menu flex items-center space-x-4">
+    <button class="btn btn-secondary">Notificaciones</button>
+    <img src="/assets/user.jpg" alt="Usuario" class="w-10 h-10 rounded-full border border-gray-300">
+  </div>
+</header>

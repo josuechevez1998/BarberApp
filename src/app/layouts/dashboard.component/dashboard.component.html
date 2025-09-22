@@ -1,1 +1,17 @@
-<p>dashboard.component works!</p>
+<div class="main-container">
+
+  <!-- Sidebar con clases dinámicas -->
+  <shared-sidebar [ngClass]="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"></shared-sidebar>
+
+  <!-- Contenedor principal -->
+  <div class="main-content flex-1 flex flex-col">
+
+    <!-- Navbar -->
+    <shared-navbar (toggleSidebar)="sidebarOpen = !sidebarOpen"></shared-navbar>
+
+    <!-- Contenido dinámico -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

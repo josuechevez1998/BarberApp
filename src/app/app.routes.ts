@@ -2,11 +2,11 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path:'',
+    path: 'auth',
     loadChildren: () => import('./routes/auth.routes'),
   },
   {
-    path: '**',
-    redirectTo: 'login'
-  }
+    path: '',
+    loadChildren: () => import('./routes/dashboard.routes'),
+  },
 ];
